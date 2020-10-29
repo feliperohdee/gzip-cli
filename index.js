@@ -37,6 +37,14 @@ const noGzipPath = path.join(inPath, 'no-gzip');
 shell.rm('-rf', gzipPath);
 shell.rm('-rf', noGzipPath);
 
+if (!fs.existsSync(gzipPath)) {
+    shell.mkdir('-p', gzipPath);
+}
+
+if (!fs.existsSync(noGzipPath)) {
+    shell.mkdir('-p', noGzipPath);
+}
+
 const files = glob.sync(inPath + '/**/*.*');
 const {
     gzip,

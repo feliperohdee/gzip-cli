@@ -18,7 +18,7 @@ if (!fs.existsSync(inPath)) {
 }
 
 if (!types.length) {
-    types = ['html', 'css', 'js', 'txt'];
+    types = ['html', 'css', 'js', 'json', 'txt'];
 }
 
 types = types.reduce((reduction, type) => {
